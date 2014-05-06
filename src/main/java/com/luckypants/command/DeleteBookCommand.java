@@ -7,12 +7,12 @@ import com.mongodb.DBCursor;
 
 public class DeleteBookCommand {
 
-	public boolean execute(String isbn) {
+	public boolean execute(String title) {
 		BooksConnectionProvider booksConn = new BooksConnectionProvider();
 		DBCollection booksCollection = booksConn.getCollection();
 
 		BasicDBObject searchQuery = new BasicDBObject();
-		searchQuery.put("isbn", isbn);
+		searchQuery.put("title", title);
 
 		DBCursor cursor = booksCollection.find(searchQuery);
 
@@ -25,7 +25,7 @@ public class DeleteBookCommand {
 
 	public static void main(String[] args) {
 		DeleteBookCommand command = new DeleteBookCommand();
-		boolean result =  command.execute("1234");
+		boolean result =  command.execute("web java");
 		System.out.println(result);
 	}
 

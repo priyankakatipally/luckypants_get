@@ -6,6 +6,8 @@ public class Book {
 	private String title;
 	private String author;
 	private String ISBN;
+	private String cost;
+	private String genre;
 	
 	public String getTitle() {
 		return title;
@@ -25,6 +27,17 @@ public class Book {
 	public void setISBN(String iSBN) {
 		ISBN = iSBN;
 	}
-	
+	public String getCost(){
+		return cost;
+	}
+	public void setCost(String cost){
+		this.cost=cost;
+	}
+	public String getGenre(){
+		return genre;
+	}
+	public void setGenre(String genre){
+		this.genre=genre;
+	}
 	
 }

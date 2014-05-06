@@ -16,14 +16,14 @@ public class BooksConnectionProvider {
 	public DBCollection getCollection() {
 		try {
 
-			MongoClient mongo = new MongoClient("oceanic.mongohq.com", 10099);
+			MongoClient mongo = new MongoClient("oceanic.mongohq.com", 10010);
 
-			DB db = mongo.getDB("luckypants");
+			DB db = mongo.getDB("luckypants1");
 			if (db == null) {
 				System.out.println("Could not connect to Database");
 			}
 
-			boolean auth = db.authenticate("unh", "unh".toCharArray());
+			boolean auth = db.authenticate("priyanka", "priyanka".toCharArray());
 			if (auth == false) {
 				System.out.println("Could not authenticate");
 			}

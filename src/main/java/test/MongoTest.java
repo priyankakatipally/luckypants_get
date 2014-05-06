@@ -26,12 +26,12 @@ public class MongoTest {
 			/**
 			 * Connect to Mongo DB
 			 */
-			MongoClient mongo = new MongoClient("oceanic.mongohq.com", 10065);
+			MongoClient mongo = new MongoClient("oceanic.mongohq.com", 10010);
 
 			/**
 			 * Connect to DB
 			 */
-			DB db = mongo.getDB("luckypants");
+			DB db = mongo.getDB("luckypants1");
 			if (db == null) {
 				System.out.println("Could not connect to Database");
 			}
